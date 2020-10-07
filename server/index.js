@@ -13,7 +13,7 @@ server.use(bodyparser.urlencoded({ extended: true }));
 server.use(cors());
 server.use(morgan('dev'));
 
-server.use('/reviews', express.static(path.join(__dirname, '../client/dist')));
+server.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 // route for getting all reviews for item
 server.get('/reviewsItem/all', (req, res) => {
