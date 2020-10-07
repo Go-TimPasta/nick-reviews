@@ -9,7 +9,7 @@ const PaginationContainer = styled.nav`
     display:inline-flex;
     list-style: none;
   }
-  .page-link {
+  .reviews-page-link {
     list-style: none;
     font-size: 13px;
     line-height: 18.2px;
@@ -17,20 +17,21 @@ const PaginationContainer = styled.nav`
     padding: 10px 15px;
     margin-right:4px;
     border-radius: 50%;
+    border: none;
+    outline:none;
   }
   .reviews-page-period {
     align-self:flex-end;
   }
-  .page-link-current {
+  .reviews-page-link-current {
     list-style: none;
     font-size: 13px;
     line-height: 18.2px;
-    color: #222222;
+    background: rgba(34, 34, 34, 0.4);
     padding: 10px 15px;
     margin-right:4px;
     border:none;
     border-radius: 50%;
-    background-color: #2222;
     outline:none;
   }
 `;
@@ -52,20 +53,20 @@ const Pagination = (props) => {
       <PaginationContainer className="PaginationContainer">
         <ul className="reviews-pagination">
           <li className="reviews-page-item">
-            <button type="button" className="page-link"><FaArrowLeft /></button>
+            <button type="button" className="reviews-page-link"><FaArrowLeft /></button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" className="page-link-current">1</button>
+            <button type="button" className="reviews-page-link-current">1</button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(secondPage)} className="page-link">2</button>
+            <button type="button" onClick={() => paginate(secondPage)} className="reviews-page-link">2</button>
           </li>
           <li className="reviews-page-period">... </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(lastPage)} className="page-link">{lastPage}</button>
+            <button type="button" onClick={() => paginate(lastPage)} className="reviews-page-link">{lastPage}</button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(next)} className="page-link"><FaArrowRight /></button>
+            <button type="button" onClick={() => paginate(next)} className="reviews-page-link"><FaArrowRight /></button>
           </li>
         </ul>
       </PaginationContainer>
@@ -76,20 +77,20 @@ const Pagination = (props) => {
       <PaginationContainer className="PaginationContainer">
         <ul className="reviews-pagination">
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(firstPage)} className="page-link"><FaArrowLeft /></button>
+            <button type="button" onClick={() => paginate(firstPage)} className="reviews-page-link"><FaArrowLeft /></button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(firstPage)} className="page-link">1</button>
+            <button type="button" onClick={() => paginate(firstPage)} className="reviews-page-link">1</button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" className="page-link-current">2</button>
+            <button type="button" className="reviews-page-link-current">2</button>
           </li>
           <li className="reviews-page-period">... </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(lastPage)} className="page-link">{lastPage}</button>
+            <button type="button" onClick={() => paginate(lastPage)} className="reviews-page-link">{lastPage}</button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(next)} className="page-link"><FaArrowRight /></button>
+            <button type="button" onClick={() => paginate(next)} className="reviews-page-link"><FaArrowRight /></button>
           </li>
         </ul>
       </PaginationContainer>
@@ -100,20 +101,20 @@ const Pagination = (props) => {
       <PaginationContainer className="PaginationContainer">
         <ul className="reviews-pagination">
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(previous)} className="page-link"><FaArrowLeft /></button>
+            <button type="button" onClick={() => paginate(previous)} className="reviews-page-link"><FaArrowLeft /></button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(firstPage)} className="page-link">1</button>
+            <button type="button" onClick={() => paginate(firstPage)} className="reviews-page-link">1</button>
           </li>
           <li className="reviews-page-period">... </li>
           <li className="reviews-page-item">
-            <button type="button" className="page-link-current">{currentPage}</button>
+            <button type="button" className="reviews-page-link-current">{currentPage}</button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(lastPage)} className="page-link">{lastPage}</button>
+            <button type="button" onClick={() => paginate(lastPage)} className="reviews-page-link">{lastPage}</button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(lastPage)} className="page-link"><FaArrowRight /></button>
+            <button type="button" onClick={() => paginate(lastPage)} className="reviews-page-link"><FaArrowRight /></button>
           </li>
         </ul>
       </PaginationContainer>
@@ -124,20 +125,20 @@ const Pagination = (props) => {
       <PaginationContainer className="PaginationContainer">
         <ul className="reviews-pagination">
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(previous)} className="page-link"><FaArrowLeft /></button>
+            <button type="button" onClick={() => paginate(previous)} className="reviews-page-link"><FaArrowLeft /></button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(firstPage)} className="page-link">1</button>
+            <button type="button" onClick={() => paginate(firstPage)} className="reviews-page-link">1</button>
           </li>
           <li className="reviews-page-period">... </li>
           <li className="reviews-page-item">
-            <button type="button" onClick={() => paginate(lastPage - 1)} className="page-link">{currentPage - 1}</button>
+            <button type="button" onClick={() => paginate(lastPage - 1)} className="reviews-page-link">{currentPage - 1}</button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" className="page-link-current">{lastPage}</button>
+            <button type="button" className="reviews-page-link-current">{lastPage}</button>
           </li>
           <li className="reviews-page-item">
-            <button type="button" className="page-link"><FaArrowRight /></button>
+            <button type="button" className="reviews-page-link"><FaArrowRight /></button>
           </li>
         </ul>
       </PaginationContainer>
@@ -147,21 +148,21 @@ const Pagination = (props) => {
     <PaginationContainer className="PaginationContainer">
       <ul className="reviews-pagination">
         <li className="reviews-page-item">
-          <button type="button" onClick={() => paginate(previous)} className="page-link"><FaArrowLeft /></button>
+          <button className="reviews-page-link" type="button" onClick={() => paginate(previous)}><FaArrowLeft /></button>
         </li>
         <li className="reviews-page-item">
-          <button type="button" onClick={() => paginate(firstPage)} className="page-link">1</button>
-        </li>
-        <li className="reviews-page-period">... </li>
-        <li className="reviews-page-item">
-          <button type="button" className="page-link-current">{currentPage}</button>
+          <button className="reviews-page-link" type="button" onClick={() => paginate(firstPage)}>1</button>
         </li>
         <li className="reviews-page-period">... </li>
         <li className="reviews-page-item">
-          <button type="button" onClick={() => paginate(lastPage)} className="page-link">{lastPage}</button>
+          <button className="reviews-page-link-current" type="button">{currentPage}</button>
+        </li>
+        <li className="reviews-page-period">... </li>
+        <li className="reviews-page-item">
+          <button className="reviews-page-link" type="button" onClick={() => paginate(lastPage)}>{lastPage}</button>
         </li>
         <li className="reviews-page-item">
-          <button type="button" onClick={() => paginate(next)} className="page-link"><FaArrowRight /></button>
+          <button className="reviews-page-link" type="button" onClick={() => paginate(next)} ><FaArrowRight /></button>
         </li>
       </ul>
     </PaginationContainer>
