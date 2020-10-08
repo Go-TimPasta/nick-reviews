@@ -10,7 +10,9 @@ const ReviewsPhotoCarouselContainer = styled.div`
     display:flex;
     align-content: center;
     overflow:hidden;
-    width: 71vw;
+    width: 46vw;
+    max-width: 880px;
+    min-width: 628px;
   }
   .reviews-carousel-title {
     margin: 0px 0px 12px;
@@ -21,10 +23,12 @@ const ReviewsPhotoCarouselContainer = styled.div`
     transition: .5s;
   }
   .reviews-carousel-pic {
-    width:16vw;
-    height:16vw;
+    width:13vw;
+    height:13vw;
     cursor:pointer;
     border-radius:10%;
+    max-width:190px;
+    max-height:190px;
   }
 
   #reviews-carousel-btn-left {
@@ -40,6 +44,7 @@ const ReviewsPhotoCarouselContainer = styled.div`
     border-radius: 50%;
     outline: none;
     cursor:pointer;
+    place-items: center;
     display: ${(props) => (props.x === 0 ? 'none;' : 'block;')};
   }
   #reviews-carousel-btn-right {

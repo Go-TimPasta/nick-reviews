@@ -65,7 +65,7 @@ const ReviewsContainer = styled.div`
       justify-content: flex-start;
       font-size: 16px;
       padding: 0px 30px 0px 0px;
-      margin: 0px 0px;
+      margin: 0px 48px 0px 0px;
     }
     .review-review-pic {
       cursor:pointer;
@@ -74,6 +74,8 @@ const ReviewsContainer = styled.div`
       height: 14vw;
       width: 14vw;
       border-radius: 10%;
+      max-width:180px;
+      max-height:180px;
     }
   `;
 

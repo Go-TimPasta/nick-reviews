@@ -19,6 +19,7 @@ const PaginationContainer = styled.nav`
     border-radius: 50%;
     border: none;
     outline:none;
+    cursor: pointer;
   }
   .reviews-page-period {
     align-self:flex-end;
@@ -33,6 +34,7 @@ const PaginationContainer = styled.nav`
     border:none;
     border-radius: 50%;
     outline:none;
+    cursor:pointer;
   }
 `;
 
