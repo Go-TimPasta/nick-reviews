@@ -13,7 +13,6 @@ const ReviewsContainer = styled.div`
     font-family: "Graphik Webfont", -apple-system, system-ui, Roboto, "Helvetica", "Arial", "sans-serif";
     display:flex;
     flex-direction: column;
-    padding: 0px 0px 0px 30px;
     .reviews-userphoto {
       vertical-align: middle;
       margin: 0px 12px 0px 0px;
