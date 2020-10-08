@@ -8,6 +8,7 @@ const PaginationContainer = styled.nav`
   .reviews-pagination {
     display:inline-flex;
     list-style: none;
+    padding: 0px 0px 0px 0px;
   }
   .reviews-page-link {
     list-style: none;

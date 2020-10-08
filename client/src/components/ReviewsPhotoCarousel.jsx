@@ -44,6 +44,7 @@ const ReviewsPhotoCarouselContainer = styled.div`
     border-radius: 50%;
     outline: none;
     cursor:pointer;
+    display:grid;
     place-items: center;
     display: ${(props) => (props.x === 0 ? 'none;' : 'block;')};
   }
