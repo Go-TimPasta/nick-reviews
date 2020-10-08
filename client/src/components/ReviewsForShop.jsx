@@ -11,7 +11,7 @@ const ReviewsForShopContainer = styled.div`
   #review-shop-title {
     font-size: 13px;
     line-height: 18px;
-    margin: 6px 6px 0px 0px;
+    margin: 0px 6px 0px 0px;
     color: #595959;
   }
   #review-shop-purchasedPic {
