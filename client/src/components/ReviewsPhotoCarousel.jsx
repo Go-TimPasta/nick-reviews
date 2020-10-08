@@ -29,6 +29,8 @@ const ReviewsPhotoCarouselContainer = styled.div`
     border-radius:10%;
     max-width:190px;
     max-height:190px;
+    min-width:145px;
+    min-height:145px;
   }
 
   #reviews-carousel-btn-left {
@@ -64,6 +66,15 @@ const ReviewsPhotoCarouselContainer = styled.div`
     cursor:pointer;
     display: ${(props) => (props.x === -100 * (props.reviewsForItem.length) + 400 ? 'none' : '')};
   }
+ .reviews-carousel-btn-arrow-left {
+    position: relative;
+    top: 2px;
+    right: 2px;
+  }
+  .reviews-carousel-btn-arrow-right {
+    position: relative;
+    top: 2px;
+  }
 `;
 
 const ReviewsPhotoCarousel = (props) => {
@@ -84,9 +95,9 @@ const ReviewsPhotoCarousel = (props) => {
           </div>
         ))}
         <button type="button" id="reviews-carousel-btn-left" onClick={goLeft}>
-          <FaAngleLeft />
+          <FaAngleLeft className="reviews-carousel-btn-arrow-left" />
         </button>
-        <button type="button" id="reviews-carousel-btn-right" onClick={() => { goRight(); }}><FaAngleRight /></button>
+        <button type="button" id="reviews-carousel-btn-right" onClick={() => { goRight(); }}><FaAngleRight className="reviews-carousel-btn-arrow-right" /></button>
       </div>
 
     </ReviewsPhotoCarouselContainer>

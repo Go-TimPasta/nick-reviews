@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const ReviewsModalContainer = styled.div`
   position:fixed;
-  height: 600px;
-  width: 800px;
+  height: 650px;
+  width: 1000px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -22,6 +22,15 @@ const ReviewsModalContainer = styled.div`
     height:100%;
     width:60%;
   }
+  .review-rating-text-modal {
+    justify-self: space-around;
+    flex-direction:row;
+    align-self: flex-start;
+    padding: 0px 0px 0px 48px;
+    width: 100%;
+    margin:0px 0px;
+  }
+  
 `;
 
 const OverlayStyle = styled.div`
@@ -51,7 +60,7 @@ const ReviewsModal = (props) => {
               <span id="review-date">{currentReview.reviewDate}</span>
             </p>
             <div className="review-rating-pic">
-              <div className="review-rating-text">
+              <div className="review-rating-text-modal">
                 <div id="review-stars">{getRating(currentReview.reviewRating)}</div>
                 <p id="review-review-text">
                   {currentReview.review}

@@ -14,7 +14,7 @@ const createUser = () => {
 const createReviewForItem = () => {
   const reviewforItem = {};
   reviewforItem.userID = Math.ceil(Math.random() * (100));
-  reviewforItem.review = faker.lorem.sentences() + faker.lorem.sentences();
+  reviewforItem.review = faker.lorem.sentences();
   reviewforItem.reviewPicDog = `http://bit.ly/etsydog${Math.ceil(Math.random() * Math.ceil(37))}`;
   reviewforItem.reviewPicCat = `http://bit.ly/etsycats${Math.ceil(Math.random() * Math.ceil(40))}`;
   reviewforItem.reviewRating = Math.floor(Math.random() * (5 - 2 + 1) + 2);
@@ -26,7 +26,7 @@ const createReviewForItem = () => {
 const createReviewForShop = () => {
   const reviewForShop = {};
   reviewForShop.userID = Math.floor(Math.random() * (100));
-  reviewForShop.review = faker.lorem.sentences() + faker.lorem.sentences();
+  reviewForShop.review = faker.lorem.sentences();
   reviewForShop.reviewPicDog = `http://bit.ly/etsydog${Math.ceil(Math.random() * Math.ceil(37))}`;
   reviewForShop.reviewPicCat =`http://bit.ly/etsydog${Math.ceil(Math.random() * Math.ceil(37))}`;
   reviewForShop.reviewRating = Math.floor(Math.random() * (5 - 2 + 1) + 2);
