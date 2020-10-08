@@ -12,7 +12,7 @@ const ReviewsHeaderContainer = styled.div`
     color: #222222;
   }
   #reviews-title-stars {
-    margin: 5px 0px 0px 12px;
+    margin: 3px 0px 0px 12px;
     font-size:20px;
     font-weight:300;
   }
