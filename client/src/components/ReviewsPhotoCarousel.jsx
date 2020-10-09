@@ -4,7 +4,6 @@ import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 import ReviewsModal from './ReviewsModal.jsx'
 
 const ReviewsPhotoCarouselContainer = styled.div`
-  padding: 9px;
   font-family: 'Roboto', sans-serif;
   font-weight:300;
   .reviews-carousel {
@@ -12,27 +11,28 @@ const ReviewsPhotoCarouselContainer = styled.div`
     display:flex;
     align-content: center;
     overflow:hidden;
-    width: 46vw;
-    max-width: 880px;
-    min-width: 628px;
+    width: 100%;
+    max-width: 770px;
+    min-width: 770px;
+    min-height:185px;
   }
   .reviews-carousel-title {
     margin: 0px 0px 12px;
   }
 
   .reviews-carousel-item {
-    padding: 9px;
+    padding: 0px 9px 0px 0px;
     transition: .5s;
   }
   .reviews-carousel-pic {
-    width:13vw;
-    height:13vw;
+    height: 14vw;
+    width: 14vw;
     cursor:pointer;
     border-radius:10%;
-    max-width:190px;
-    max-height:190px;
-    min-width:145px;
-    min-height:145px;
+    max-width:185px;
+    max-height:185px;
+    min-width:185px;
+    min-height:185px;
   }
 
   #reviews-carousel-btn-left {

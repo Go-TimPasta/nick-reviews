@@ -76,8 +76,8 @@ const ReviewsContainer = styled.div`
       height: 14vw;
       width: 14vw;
       border-radius: 10%;
-      max-width:180px;
-      max-height:180px;
+      max-width:175px;
+      max-height:175px;
     }
   `;
 
