@@ -13,9 +13,7 @@ const ReviewsPhotoCarouselContainer = styled.div`
     align-content: center;
     overflow:hidden;
     width: 100%;
-    max-width: 770px;
-    min-width: 770px;
-    min-height:185px;
+    max-width: 800px;
   }
   .reviews-carousel-title {
     margin: 0px 0px 12px;
@@ -30,10 +28,8 @@ const ReviewsPhotoCarouselContainer = styled.div`
     width: 14vw;
     cursor:pointer;
     border-radius:10%;
-    max-width:185px;
-    max-height:185px;
-    min-width:185px;
-    min-height:185px;
+    max-width:192px;
+    max-height:192px;
   }
 
   #reviews-carousel-btn-left {
