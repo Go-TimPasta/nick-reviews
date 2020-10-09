@@ -5,7 +5,7 @@ import { FaStar, FaCaretDown, FaCheck } from 'react-icons/fa';
 const ReviewsHeaderContainer = styled.div`
   .reviews-total {
     display:flex;
-    font-family: "Guardian-EgypTT", serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.35px;
     font-size: 26px;
     font-weight: 300;
