@@ -4,35 +4,32 @@ import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 import ReviewsModal from './ReviewsModal.jsx'
 
 const ReviewsPhotoCarouselContainer = styled.div`
-  padding: 9px;
   font-family: 'Roboto', sans-serif;
   font-weight:300;
+  margin: 0px 0px 12px 0px;
   .reviews-carousel {
     position: relative;
     display:flex;
     align-content: center;
     overflow:hidden;
-    width: 46vw;
-    max-width: 880px;
-    min-width: 628px;
+    width: 100%;
+    max-width: 800px;
   }
   .reviews-carousel-title {
     margin: 0px 0px 12px;
   }
 
   .reviews-carousel-item {
-    padding: 9px;
+    padding: 0px 9px 0px 0px;
     transition: .5s;
   }
   .reviews-carousel-pic {
-    width:13vw;
-    height:13vw;
+    height: 14vw;
+    width: 14vw;
     cursor:pointer;
     border-radius:10%;
-    max-width:190px;
-    max-height:190px;
-    min-width:145px;
-    min-height:145px;
+    max-width:192px;
+    max-height:192px;
   }
 
   #reviews-carousel-btn-left {

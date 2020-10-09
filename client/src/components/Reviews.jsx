@@ -14,6 +14,7 @@ const ReviewsContainer = styled.div`
     display:flex;
     flex-direction: column;
     margin: 0px 50px 0px 30px;
+    max-width: 850px;
     .reviews-userphoto {
       vertical-align: middle;
       margin: 0px 12px 0px 0px;
@@ -76,8 +77,8 @@ const ReviewsContainer = styled.div`
       height: 14vw;
       width: 14vw;
       border-radius: 10%;
-      max-width:180px;
-      max-height:180px;
+      max-width:175px;
+      max-height:175px;
     }
   `;
 
