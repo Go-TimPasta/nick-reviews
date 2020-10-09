@@ -10,7 +10,7 @@ import ReviewsModal from './ReviewsModal.jsx'
 import Pagination from './Pagination.jsx';
 
 const ReviewsContainer = styled.div`
-    font-family: "Graphik Webfont", -apple-system, system-ui, Roboto, "Helvetica", "Arial", "sans-serif";
+    font-family: 'Roboto', sans-serif;
     display:flex;
     flex-direction: column;
     margin: 0px 50px 0px 30px;
@@ -65,6 +65,7 @@ const ReviewsContainer = styled.div`
     #review-review-text {
       justify-content: flex-start;
       font-size: 16px;
+      font-weight: 300;
       padding: 0px 30px 0px 0px;
       margin: 0px 48px 0px 0px;
     }
@@ -95,6 +96,7 @@ export default class Reviews extends React.Component {
       sortName: 'Recommended',
       currentItemReview: [],
       currentShopReview: [],
+      categoryId: 3,
     };
     this.getAllReviewsForItem = this.getAllReviewsForItem.bind(this);
     this.getAllReviewsForShop = this.getAllReviewsForShop.bind(this);
@@ -109,12 +111,13 @@ export default class Reviews extends React.Component {
   }
 
   componentDidMount() {
-    this.getAllReviewsForItem();
-    this.getAllReviewsForShop();
+    const { categoryId } = this.state;
+    this.getAllReviewsForItem(categoryId);
+    this.getAllReviewsForShop(categoryId);
   }
 
-  getAllReviewsForItem() {
-    axios.get('/reviewsItem/all')
+  getAllReviewsForItem(id) {
+    axios.get(`/reviewsItem/${id}`)
       .then((results) => {
         for (let i = 0; i < results.data.length; i += 1) {
           const dateArr = results.data[i].reviewDate.split(' ');
@@ -176,8 +179,8 @@ export default class Reviews extends React.Component {
     });
   }
 
-  getAllReviewsForShop() {
-    axios.get('/reviewsShop/all')
+  getAllReviewsForShop(id) {
+    axios.get(`/reviewsShop/${id}`)
       .then((results) => {
         for (let i = 0; i < results.data.length; i += 1) {
           const dateArr = results.data[i].reviewDate.split(' ');
@@ -260,12 +263,13 @@ export default class Reviews extends React.Component {
   }
 
   handleSortRecommended() {
+    const { categoryId } = this.state;
     this.setState({
       sortName: 'Recommended',
       currentPage: 1,
     });
-    this.getAllReviewsForItem();
-    this.getAllReviewsForShop();
+    this.getAllReviewsForItem(categoryId);
+    this.getAllReviewsForShop(categoryId);
     this.handleDropdown();
   }
 

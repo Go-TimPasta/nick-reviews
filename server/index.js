@@ -16,8 +16,8 @@ server.use(morgan('dev'));
 server.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 // route for getting all reviews for item
-server.get('/reviewsItem/all', (req, res) => {
-  dbHelpers.getAllReviewsForItem((err, results) => {
+server.get('/reviewsItem/:id', (req, res) => {
+  dbHelpers.getAllReviewsForItem(req.params.id, (err, results) => {
     if (err) {
       res.status(404).send(err);
     } else {
@@ -27,8 +27,8 @@ server.get('/reviewsItem/all', (req, res) => {
 });
 
 // route for getting all reviews for shop
-server.get('/reviewsShop/all', (req, res) => {
-  dbHelpers.getAllReviewsForShop((err, results) => {
+server.get('/reviewsShop/:id', (req, res) => {
+  dbHelpers.getAllReviewsForShop(req.params.id, (err, results) => {
     if (err) {
       res.status(404).send(err);
     } else {
