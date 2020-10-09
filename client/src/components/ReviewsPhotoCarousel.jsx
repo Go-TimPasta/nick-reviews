@@ -6,6 +6,7 @@ import ReviewsModal from './ReviewsModal.jsx'
 const ReviewsPhotoCarouselContainer = styled.div`
   font-family: 'Roboto', sans-serif;
   font-weight:300;
+  margin: 0px 0px 12px 0px;
   .reviews-carousel {
     position: relative;
     display:flex;
