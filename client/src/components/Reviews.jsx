@@ -6,7 +6,7 @@ import ReviewsHeader from './ReviewsHeader.jsx';
 import ReviewsForItem from './ReviewsForItems.jsx';
 import ReviewsForShop from './ReviewsForShop.jsx';
 import ReviewsPhotoCarousel from './ReviewsPhotoCarousel.jsx';
-import ReviewsModal from './ReviewsModal.jsx'
+import ReviewsModal from './ReviewsModal.jsx';
 import Pagination from './Pagination.jsx';
 
 const ReviewsContainer = styled.div`
