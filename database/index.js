@@ -1,9 +1,10 @@
 const mysql = require('mysql');
+const PASSWORD = require('./config.js');
 
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: PASSWORD,
   database: 'etsyReviewsDB',
 });
 
