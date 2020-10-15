@@ -1,4 +1,4 @@
-# Etsy-Reviews
+# Getsy Reviews
 
 ## Related Projects
 
@@ -13,13 +13,11 @@
 
 ## CRUD Operations
 
-| Endpoint          | Type   | Operation                          |
-|-------------------|--------|------------------------------------|
-| `/`               | GET    | Get all reviews for shop by id     |
-| `/`               | GET    | Get all reviews for product by id  |
-| `/`               | POST   | Post a review                      |
-| `/`               | PUT    | Update a review                    |
-| `/`               | DELETE | Delete a review                    |
+| Endpoint           | Type  | Operation                          |
+|--------------------|-------|------------------------------------|
+| `/reviewsItem/:id` | GET   | Get all reviews for product by id  |
+| `/reviewsShop/:id` | GET   | Get all reviews for shop by id     |
+
 
 ## Data
 
