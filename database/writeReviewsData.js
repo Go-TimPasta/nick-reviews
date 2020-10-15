@@ -31,7 +31,7 @@ function writeReviewData(writer, encoding, callback) {
     do {
       i -= 1;
       productOrShopId += 1;
-      const howManyReviews = faker.random.number({ min: 3, max: 15 });
+      const howManyReviews = faker.random.number({ min: 4, max: 12 });
       for (let j = 1; j < howManyReviews; j += 1) {
         id += 1;
         const userName = `${faker.name.firstName()} ${faker.name.lastName()}`;
