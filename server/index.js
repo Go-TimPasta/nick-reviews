@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 const express = require('express');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const dbHelpers = require('../database/dbHelpers.js');
+const dbHelpers = require('../database/dbhelpers.js');
 
 const server = express();
 const port = 8003;
