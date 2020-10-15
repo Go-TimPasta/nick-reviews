@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 const express = require('express');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const dbHelpers = require('../database/dbHelpers.js');
+const dbHelpers = require('../database/dbhelpers.js');
 
 const server = express();
 const port = 8003;
@@ -29,6 +30,39 @@ server.get('/reviewsItem/:id', (req, res) => {
 // route for getting all reviews for shop
 server.get('/reviewsShop/:id', (req, res) => {
   dbHelpers.getAllReviewsForShop(req.params.id, (err, results) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      res.status(200).send(results);
+    }
+  });
+});
+
+// Route to post a new review
+server.post('/reviews/add', (req, res) => {
+  dbHelpers.postReview(req.body, (err, results) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      res.status(200).send(results);
+    }
+  });
+});
+
+// Route to update a review
+server.put('/reviews/:id', (req, res) => {
+  dbHelpers.postReview(req.params.id, req.body, (err, results) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      res.status(200).send(results);
+    }
+  });
+});
+
+// Route to delete a review
+server.delete('/reviews/:id', (req, res) => {
+  dbHelpers.postReview(req.params.body, (err, results) => {
     if (err) {
       res.status(404).send(err);
     } else {
