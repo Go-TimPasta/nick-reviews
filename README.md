@@ -4,6 +4,8 @@
 
   - https://github.com/Go-TimPasta/tim-related
   - https://github.com/Go-TimPasta/SellerDescription
+  - https://github.com/Go-TimPasta/jason-nav
+  - https://github.com/Go-TimPasta/nick-proxy
 
 ## Table of Contents
 
@@ -22,16 +24,19 @@
 ## Data
 
 ### Schema
-- id (INTEGER UNIQUE)
-- productOrShopId (INTEGER)
-- userName (STRING)
-- userPhoto (STRING)
-- reviewDate (STRING)
-- style (STRING)
-- review (STRING)
-- photoId (STRING)
-- reviewPic (STRING)
-- reviewRating (INTEGER)
-- purchasedItemDescription (STRING)
+
+| Column Name              | Type    |
+|--------------------------|---------|
+| id                       | INTEGER |
+| productOrShopId          | INTEGER |
+| userName                 | STRING  |
+| userPhoto                | STRING  |
+| reviewDate               | STRING  |
+| style                    | STRING  |
+| review                   | STRING  |
+| photoId                  | STRING  |
+| reviewPic                | STRING  |
+| reviewRating             | INTEGER |
+| purchasedItemDescription | STRING  |
 
 ## Setup
