@@ -1,7 +1,42 @@
-# Etsy-Reviews
+# Getsy Reviews
 
-<!-- Right now, I have my data stored in one table containing all the relevant information needed for each user creating and displaying a review. Some of the data that I am storing are: userName, userPhoto, the user’s review, user rating, user review’s date, the purchased item description, the purchased item picture, and the name of the owner that sold the item.
+## Related Projects
 
-I am using mySQL to hold all my data. I chose this because this is the most comfortable database for myself and I knew that I was only going to use 1-2 tables. 
+  - https://github.com/Go-TimPasta/tim-related
+  - https://github.com/Go-TimPasta/SellerDescription
+  - https://github.com/Go-TimPasta/jason-nav
+  - https://github.com/Go-TimPasta/nick-proxy
 
-I plan to store all the data in one table and access the different parts of the table to display the different properties of each review.  -->
+## Table of Contents
+
+1. [CRUD Operations](#CRUD-Operations)
+2. [Data](#Data)
+3. [Setup](#Setup)
+
+## CRUD Operations
+
+| Endpoint           | Type  | Operation                          |
+|--------------------|-------|------------------------------------|
+| `/reviewsItem/:id` | GET   | Get all reviews for product by id  |
+| `/reviewsShop/:id` | GET   | Get all reviews for shop by id     |
+
+
+## Data
+
+### Schema
+
+| Column Name              | Type    |
+|--------------------------|---------|
+| id                       | INTEGER |
+| productOrShopId          | INTEGER |
+| userName                 | STRING  |
+| userPhoto                | STRING  |
+| reviewDate               | STRING  |
+| style                    | STRING  |
+| review                   | STRING  |
+| photoId                  | STRING  |
+| reviewPic                | STRING  |
+| reviewRating             | INTEGER |
+| purchasedItemDescription | STRING  |
+
+## Setup
