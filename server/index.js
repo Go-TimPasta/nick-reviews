@@ -38,37 +38,4 @@ server.get('/reviewsShop/:id', (req, res) => {
   });
 });
 
-// Route to post a new review
-server.post('/reviews/add', (req, res) => {
-  dbHelpers.postReview(req.body, (err, results) => {
-    if (err) {
-      res.status(404).send(err);
-    } else {
-      res.status(200).send(results);
-    }
-  });
-});
-
-// Route to update a review
-server.put('/reviews/:id', (req, res) => {
-  dbHelpers.postReview(req.params.id, req.body, (err, results) => {
-    if (err) {
-      res.status(404).send(err);
-    } else {
-      res.status(200).send(results);
-    }
-  });
-});
-
-// Route to delete a review
-server.delete('/reviews/:id', (req, res) => {
-  dbHelpers.postReview(req.params.body, (err, results) => {
-    if (err) {
-      res.status(404).send(err);
-    } else {
-      res.status(200).send(results);
-    }
-  });
-});
-
 server.listen(port, () => console.log(`listening on ${port}`));
