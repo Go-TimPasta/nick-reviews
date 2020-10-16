@@ -40,7 +40,7 @@ function writeReviewData(writer, encoding, callback) {
         const style = faker.random.arrayElement(stylesArr);
         const review = faker.lorem.sentences();
         const photoId = faker.random.number({ min: 1, max: 500 });
-        const reviewPic = `https://getsy-image-storage.s3-us-west-1.amazonaws.com/getsy-images/getsy_photo_${photoId}.jpg`;
+        const reviewPic = `https://getsy-reviews.s3-us-west-1.amazonaws.com/getsy_${photoId}.jpg`;
         const reviewRating = faker.random.number({ min: 1, max: 5 });
         const purchasedItemDescription = faker.lorem.sentence();
 
