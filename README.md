@@ -34,7 +34,6 @@
 | reviewDate               | STRING   |
 | style                    | STRING   |
 | review                   | STRING   |
-| photoId                  | STRING   |
 | reviewPic                | STRING   |
 | reviewRating             | INTEGER  |
 | purchasedItemDescription | STRING   |

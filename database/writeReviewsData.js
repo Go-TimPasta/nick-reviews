@@ -1,5 +1,6 @@
 const faker = require('faker');
 const fs = require('fs');
+const moment = require('moment');
 
 faker.locale = 'en_US';
 
@@ -17,13 +18,13 @@ Product rating: 1–5
 Item purchased
 */
 
-const writeReviews = fs.createWriteStream('database/reviewsData.csv');
+const writeReviews = fs.createWriteStream('database/reviewsDataTest.csv');
 writeReviews.write('id,productOrShopId,userName,userPhoto,reviewDate,style,review,reviewPic,reviewRating,purchasedItemDescription\n', 'utf8');
 
 const stylesArr = ['Digital Only', 'Canvas 8x10', 'Canvas 12x16', 'Canvas 18x24', 'Poster 8x10', 'Poster 12x16', 'Poster 18x24', 'Poster 30x40'];
 
 function writeReviewData(writer, encoding, callback) {
-  let i = 10000000;
+  let i = 10;
   let productOrShopId = 0;
   let id = 0;
   function write() {
@@ -36,7 +37,8 @@ function writeReviewData(writer, encoding, callback) {
         id += 1;
         const userName = `${faker.name.firstName()} ${faker.name.lastName()}`;
         const userPhoto = faker.image.avatar();
-        const reviewDate = faker.date.between('2020-07-15', '2020-10-15');
+        const fakerDate = faker.date.between('2020-07-15', '2020-10-15');
+        const reviewDate = moment(fakerDate).format('YYYY-MM-DD HH:mm:ss Z');
         const style = faker.random.arrayElement(stylesArr);
         const review = faker.lorem.sentences();
         const photoId = faker.random.number({ min: 1, max: 500 });
