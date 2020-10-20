@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import axios from 'axios';
 import { FaStar } from 'react-icons/fa';
@@ -97,7 +98,8 @@ export default class Reviews extends React.Component {
       sortName: 'Recommended',
       currentItemReview: [],
       currentShopReview: [],
-      categoryId: 3,
+      productId: (Math.floor(Math.random() * 10000001)), // random int between 1–10MIL
+      shopId: (Math.floor(Math.random() * 10000001)), // random int between 1–10MIL
     };
     this.getAllReviewsForItem = this.getAllReviewsForItem.bind(this);
     this.getAllReviewsForShop = this.getAllReviewsForShop.bind(this);
@@ -109,12 +111,13 @@ export default class Reviews extends React.Component {
     this.getOrderedReviews = this.getOrderedReviews.bind(this);
     this.handleSortNewest = this.handleSortNewest.bind(this);
     this.handleSortRecommended = this.handleSortRecommended.bind(this);
+    this.getRating = this.getRating.bind(this);
   }
 
   componentDidMount() {
-    const { categoryId } = this.state;
-    this.getAllReviewsForItem(categoryId);
-    this.getAllReviewsForShop(categoryId);
+    const { productId, shopId } = this.state;
+    this.getAllReviewsForItem(productId);
+    this.getAllReviewsForShop(shopId);
   }
 
   getAllReviewsForItem(id) {
@@ -264,13 +267,13 @@ export default class Reviews extends React.Component {
   }
 
   handleSortRecommended() {
-    const { categoryId } = this.state;
+    const { productId, shopId } = this.state;
     this.setState({
       sortName: 'Recommended',
       currentPage: 1,
     });
-    this.getAllReviewsForItem(categoryId);
-    this.getAllReviewsForShop(categoryId);
+    this.getAllReviewsForItem(productId);
+    this.getAllReviewsForShop(shopId);
     this.handleDropdown();
   }
 
