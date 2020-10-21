@@ -201,7 +201,6 @@ export default class Reviews extends React.Component {
 
   getRating(rating) {
     if (rating === 1) {
-      console.log(this.state);
       return <FaStar />;
     }
     if (rating === 2) {
