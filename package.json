@@ -4,8 +4,8 @@
   "description": "FEC Etsy reviews portion",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -d --watch",
-    "start": "nodemon ./server/index.js",
+    "build": "webpack -d",
+    "start": "node ./server/index.js",
     "seed": "node ./database/seed.js",
     "test": "jest"
   },
@@ -43,6 +43,7 @@
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
     "mysql2": "^1.7.0",
+    "newrelic": "^6.13.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
