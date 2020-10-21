@@ -2,6 +2,7 @@
 require('newrelic');
 
 const express = require('express');
+// const compression = require('compression');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const cors = require('cors');
@@ -15,6 +16,7 @@ server.use(bodyparser.json());
 server.use(bodyparser.urlencoded({ extended: true }));
 server.use(cors());
 server.use(morgan('dev'));
+// server.use(compression());
 
 server.use('/', express.static(path.join(__dirname, '../client/dist')));
 
