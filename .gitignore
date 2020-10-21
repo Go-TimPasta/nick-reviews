@@ -1,5 +1,6 @@
 # Password Files
 config.js
+newrelic-key.js
 
 # Logs
 logs
