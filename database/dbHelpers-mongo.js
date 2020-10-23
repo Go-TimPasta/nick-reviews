@@ -14,7 +14,7 @@ module.exports = {
       review: 1,
       reviewPic: 1,
       reviewRating: 1,
-    }).hint({ productOrShopId: 1 }).exec((err, results) => {
+    }).hint({ productOrShopId: 1 }).maxTimeMS(150).exec((err, results) => {
       if (err) {
         callback(err);
       } else {
