@@ -4,9 +4,10 @@
   "description": "FEC Etsy reviews portion",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start": "node ./server/index.js"
+    "build": "webpack -p",
+    "start": "node ./server/index.js",
+    "seed": "node ./database/seed.js",
+    "test": "jest"
   },
   "author": "JH",
   "license": "MIT",
