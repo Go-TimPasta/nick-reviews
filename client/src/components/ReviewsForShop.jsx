@@ -40,26 +40,26 @@ const ReviewsForShop = (props) => {
       {reviewsForShop.map((review) => (
         <div className="ReviewsListForShop" key={review.id}>
           <div className="reviews-usertitle">
-            <img src={review.userPhoto} className="reviews-userphoto" alt="" />
-            <span id="review-username">{review.userName}</span>
-            <span id="review-date">{review.reviewDate}</span>
+            <img src={review.userphoto} className="reviews-userphoto" alt="" />
+            <span id="review-username">{review.username}</span>
+            <span id="review-date">{review.reviewdate}</span>
           </div>
           <div className="review-rating-pic">
             <div className="review-rating-text">
-              <div id="review-stars">{getRating(review.reviewRating)}</div>
+              <div id="review-stars">{getRating(review.reviewrating)}</div>
               <p id="review-review-text">
                 {review.review}
               </p>
             </div>
             <a  className="review-review-pic"  onClick={() => {handleModalClick(); handleClickIdShop(review.id);}} >
-              <img className="review-review-pic" src={review.reviewPic} alt="" />
+              <img className="review-review-pic" src={review.reviewpic} alt="" />
               <ReviewsModal />
             </a>
           </div>
           <div className="review-rating-text">
             <p id="review-shop-title">Purchased Item: </p>
             <div className="review-shop-pic/description">
-              <img id="review-shop-purchasedPic" src={review.purchasedItemPic} alt="" /> <span id="review-shop-description"> {review.purchasedItemDescription} </span>
+              <img id="review-shop-purchasedPic" src={review.purchaseditempic} alt="" /> <span id="review-shop-description"> {review.purchaseditemdescription} </span>
             </div>
           </div>
         </div>

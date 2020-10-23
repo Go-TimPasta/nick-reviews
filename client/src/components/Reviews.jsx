@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import { FaStar } from 'react-icons/fa';
 import styled from 'styled-components';
+import Moment from 'react-moment';
 import ReviewsHeader from './ReviewsHeader.jsx';
 import ReviewsForItem from './ReviewsForItems.jsx';
 import ReviewsForShop from './ReviewsForShop.jsx';
@@ -124,8 +125,8 @@ export default class Reviews extends React.Component {
     axios.get(`/reviewsItem/${id}`)
       .then((results) => {
         for (let i = 0; i < results.data.length; i += 1) {
-          const dateArr = results.data[i].reviewDate.split(' ');
-          results.data[i].reviewDate = `${dateArr[1]} ${dateArr[2]}, ${dateArr[3]}`;
+          const unformattedDate = results.data[i].reviewdate;
+          results.data[i].reviewdate = <Moment format="MMM Do, YYYY">{unformattedDate}</Moment>;
         }
         this.setState({
           reviewsForItem: results.data,
@@ -141,7 +142,7 @@ export default class Reviews extends React.Component {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const getOrderedReviewItems = () => {
       for (let i = 0; i < reviewsForItem.length; i += 1) {
-        const datesArr = reviewsForItem[i].reviewDate.split(' ');
+        const datesArr = reviewsForItem[i].reviewdate.split(' ');
         reviewsForItem[i].month = datesArr[0];
         reviewsForItem[i].day = datesArr[1];
         reviewsForItem[i].year = datesArr[2]
@@ -160,7 +161,7 @@ export default class Reviews extends React.Component {
     });
     const getOrderedReviewShop = () => {
       for (let i = 0; i < reviewsForShop.length; i += 1) {
-        const datesArr = reviewsForShop[i].reviewDate.split(' ');
+        const datesArr = reviewsForShop[i].reviewdate.split(' ');
         reviewsForShop[i].month = datesArr[0];
         reviewsForShop[i].day = datesArr[1];
         reviewsForShop[i].year = datesArr[2]
@@ -187,8 +188,8 @@ export default class Reviews extends React.Component {
     axios.get(`/reviewsShop/${id}`)
       .then((results) => {
         for (let i = 0; i < results.data.length; i += 1) {
-          const dateArr = results.data[i].reviewDate.split(' ');
-          results.data[i].reviewDate = `${dateArr[1]} ${dateArr[2]}, ${dateArr[3]}`;
+          const unformattedDate = results.data[i].reviewdate;
+          results.data[i].reviewdate = <Moment format="MMM Do, YYYY">{unformattedDate}</Moment>;
         }
         this.setState({
           reviewsForShop: results.data,
@@ -352,7 +353,6 @@ export default class Reviews extends React.Component {
             isOpen={isOpen}
             handleModalClick={this.handleModalClick}
             handleClickIdItem={this.handleClickIdItem}
-
             x={x}
             goLeft={goLeft}
             goRight={goRight}

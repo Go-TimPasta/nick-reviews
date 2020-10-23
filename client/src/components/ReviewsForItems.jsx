@@ -25,13 +25,13 @@ const ReviewsforItem = (props) => {
       {reviewsForItem.map((review) => (
         <div className="ReviewsListForItems" key={review.id}>
           <p className="reviews-usertitle">
-            <img src={review.userPhoto} className="reviews-userphoto" alt="" />
-            <span id="review-username">{review.userName}</span>
-            <span id="review-date">{review.reviewDate}</span>
+            <img src={review.userphoto} className="reviews-userphoto" alt="" />
+            <span id="review-username">{review.username}</span>
+            <span id="review-date">{review.reviewdate}</span>
           </p>
           <div className="review-rating-pic">
             <div className="review-rating-text">
-              <div id="review-stars">{getRating(review.reviewRating)}</div>
+              <div id="review-stars">{getRating(review.reviewrating)}</div>
               <p className="review-style">
                 Style: <span id="review-style-type">{review.style}</span>
               </p>
@@ -40,7 +40,7 @@ const ReviewsforItem = (props) => {
               </p>
             </div>
             <a  className="review-review-pic"  onClick={() => {handleModalClick(); handleClickIdItem(review.id);}} >
-              <img className="review-review-pic" src={review.reviewPic} alt="" />
+              <img className="review-review-pic" src={review.reviewpic} alt="" />
               <ReviewsModal />
             </a>
           </div>

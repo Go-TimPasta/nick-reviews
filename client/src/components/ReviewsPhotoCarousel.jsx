@@ -88,7 +88,7 @@ const ReviewsPhotoCarousel = (props) => {
         {reviewsForItem.map((review) => (
           <div className="reviews-carousel-item" key={review.id} style={{ transform: `translateX(${x}%)` }}>
             <a className="reviews-carousel-pic"  onClick={() => {handleModalClick(); handleClickIdItem(review.id);}} >
-              <img className="reviews-carousel-pic" src={review.reviewPic} alt="" />
+              <img className="reviews-carousel-pic" src={review.reviewpic} alt="" />
               <ReviewsModal />
             </a>
           </div>
