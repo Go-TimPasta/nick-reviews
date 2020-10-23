@@ -18,27 +18,23 @@ import { check, sleep } from 'k6';
 
 export const options = {
   stages: [
-    { duration: '30s', target: 100 },
-    { duration: '1m30s', target: 100 },
-    { duration: '30s', target: 200 },
-    { duration: '1m30s', target: 200 },
-    { duration: '30s', target: 300 },
-    { duration: '1m30s', target: 300 },
-    { duration: '30s', target: 400 },
-    { duration: '1m30s', target: 400 },
-    { duration: '30s', target: 500 },
-    { duration: '1m30s', target: 500 },
+    { duration: '1m', target: 200 },
+    { duration: '2m', target: 200 },
+    { duration: '1m', target: 400 },
+    { duration: '2m', target: 400 },
+    { duration: '1m', target: 500 },
+    { duration: '2m', target: 500 },
     { duration: '1m', target: 600 },
     { duration: '2m', target: 600 },
-    { duration: '1m', target: 700 },
-    { duration: '2m', target: 700 },
-    { duration: '1m', target: 800 },
-    { duration: '2m', target: 800 },
-    { duration: '1m', target: 900 },
-    { duration: '2m', target: 900 },
-    { duration: '1m', target: 1000 },
+    { duration: '1m30s', target: 800 },
+    { duration: '3m', target: 800 },
     { duration: '2m', target: 1000 },
-    { duration: '5m', target: 0 }, // scale down. Recovery stage.
+    { duration: '4m', target: 1000 },
+    { duration: '2m', target: 1200 },
+    { duration: '5m', target: 1200 },
+    { duration: '2m', target: 1400 },
+    { duration: '5m', target: 1400 },
+    { duration: '8m', target: 0 }, // scale down. Recovery stage.
   ],
 };
 
