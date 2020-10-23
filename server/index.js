@@ -6,7 +6,7 @@ const compression = require('compression');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const dbHelpers = require('../database/dbHelpers-mongo.js');
+const dbHelpers = require('../database/dbHelpers-postgres.js');
 
 const server = express();
 const port = 8003;
