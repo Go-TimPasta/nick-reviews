@@ -30,7 +30,7 @@ const ReviewsModalContainer = styled.div`
     width: 100%;
     margin:0px 0px;
   }
-  
+
 `;
 
 const OverlayStyle = styled.div`
@@ -51,17 +51,17 @@ const ReviewsModal = (props) => {
   return (
     <div>
       <ReviewsModalContainer>
-        <img className="reviews-popup-image" src={currentReview.reviewPic} alt="" />
+        <img className="reviews-popup-image" src={currentReview.reviewpic} alt="" />
         <div className="reviews-popup-info">
           <div className="ReviewsListForItems" key={currentReview.id}>
             <p className="reviews-usertitle">
-              <img src={currentReview.userPhoto} className="reviews-userphoto" alt="" />
-              <span id="review-username">{currentReview.userName}</span>
-              <span id="review-date">{currentReview.reviewDate}</span>
+              <img src={currentReview.userphoto} className="reviews-userphoto" alt="" />
+              <span id="review-username">{currentReview.username}</span>
+              <span id="review-date">{currentReview.reviewdate}</span>
             </p>
             <div className="review-rating-pic">
               <div className="review-rating-text-modal">
-                <div id="review-stars">{getRating(currentReview.reviewRating)}</div>
+                <div id="review-stars">{getRating(currentReview.reviewrating)}</div>
                 <p id="review-review-text">
                   {currentReview.review}
                 </p>

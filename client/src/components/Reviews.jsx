@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import { FaStar } from 'react-icons/fa';
 import styled from 'styled-components';
+import moment from 'moment';
 import ReviewsHeader from './ReviewsHeader.jsx';
 import ReviewsForItem from './ReviewsForItems.jsx';
 import ReviewsForShop from './ReviewsForShop.jsx';
@@ -123,9 +124,10 @@ export default class Reviews extends React.Component {
   getAllReviewsForItem(id) {
     axios.get(`/reviewsItem/${id}`)
       .then((results) => {
-        for (let i = 0; i < results.data.length; i += 1) {
-          const dateArr = results.data[i].reviewDate.split(' ');
-          results.data[i].reviewDate = `${dateArr[1]} ${dateArr[2]}, ${dateArr[3]}`;
+        const itemReviews = results.data;
+        for (let i = 0; i < itemReviews.length; i += 1) {
+          const unformattedDate = itemReviews[i].reviewdate;
+          itemReviews[i].reviewdate = moment(unformattedDate).format('MMM Do, YYYY');
         }
         this.setState({
           reviewsForItem: results.data,
@@ -141,7 +143,7 @@ export default class Reviews extends React.Component {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const getOrderedReviewItems = () => {
       for (let i = 0; i < reviewsForItem.length; i += 1) {
-        const datesArr = reviewsForItem[i].reviewDate.split(' ');
+        const datesArr = reviewsForItem[i].reviewdate.split(' ');
         reviewsForItem[i].month = datesArr[0];
         reviewsForItem[i].day = datesArr[1];
         reviewsForItem[i].year = datesArr[2]
@@ -160,7 +162,7 @@ export default class Reviews extends React.Component {
     });
     const getOrderedReviewShop = () => {
       for (let i = 0; i < reviewsForShop.length; i += 1) {
-        const datesArr = reviewsForShop[i].reviewDate.split(' ');
+        const datesArr = reviewsForShop[i].reviewdate.split(' ');
         reviewsForShop[i].month = datesArr[0];
         reviewsForShop[i].day = datesArr[1];
         reviewsForShop[i].year = datesArr[2]
@@ -186,9 +188,10 @@ export default class Reviews extends React.Component {
   getAllReviewsForShop(id) {
     axios.get(`/reviewsShop/${id}`)
       .then((results) => {
-        for (let i = 0; i < results.data.length; i += 1) {
-          const dateArr = results.data[i].reviewDate.split(' ');
-          results.data[i].reviewDate = `${dateArr[1]} ${dateArr[2]}, ${dateArr[3]}`;
+        const shopReviews = results.data;
+        for (let i = 0; i < shopReviews.length; i += 1) {
+          const unformattedDate = shopReviews[i].reviewdate;
+          shopReviews[i].reviewdate = moment(unformattedDate).format('MMM Do, YYYY');
         }
         this.setState({
           reviewsForShop: results.data,
@@ -352,7 +355,6 @@ export default class Reviews extends React.Component {
             isOpen={isOpen}
             handleModalClick={this.handleModalClick}
             handleClickIdItem={this.handleClickIdItem}
-
             x={x}
             goLeft={goLeft}
             goRight={goRight}
