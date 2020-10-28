@@ -12,7 +12,3 @@ CREATE TABLE reviews (
   reviewRating INT NOT NULL,
   purchasedItemDescription VARCHAR(255)
 );
-
--- COPY reviews
---   FROM 'reviewsData1.csv'
---   CSV HEADER;
