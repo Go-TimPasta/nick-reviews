@@ -7,6 +7,8 @@ const bodyparser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 const dbHelpers = require('../database/dbHelpers-postgres.js');
+// eslint-disable-next-line no-unused-vars
+const db = require('../database/index-postgres.js');
 
 const server = express();
 const port = 8003;
